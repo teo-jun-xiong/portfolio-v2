@@ -5,431 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>teo jun xiong</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+
+    <script src="js/list-items-selector.js"></script>
+    <script src="js/typing-animation.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/animation.velocity.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
+    <script src="js/aos.js"></script>
   </head>
   <body>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Merriweather&family=Fira+Sans:wght@900&family=Montserrat:ital,wght@0,700;0,900;1,400&family=Righteous&family=Ubuntu+Mono&display=swap");
-
-      body {
-        margin: 0;
-        background-color: #f8f8f8;
-        word-break: keep-all;
-        overflow-x: hidden;
-        /* width: 100vw; */
-      }
-
-      h2 {
-        font-family: "Righteous";
-        font-weight: 700;
-        font-size: 60px;
-      }
-
-      h3 {
-        font-family: "Righteous";
-        font-weight: 500;
-        font-size: 48px;
-      }
-      h4 {
-        font-family: "Righteous";
-        font-size: 36px;
-      }
-      h5 {
-        font-family: "Righteous";
-        font-size: 24px;
-      }
-      p {
-        font-family: "Merriweather";
-      }
-      .code {
-        font-family: "Ubuntu Mono";
-      }
-      /* LANDING */
-      .landing {
-        height: 100vh;
-      }
-      .header {
-        padding: 0 240px;
-      }
-      .intro {
-        display: flex;
-        flex-flow: row;
-        height: 100%;
-        width: 100%;
-        font-family: "Righteous";
-        font-size: 72px;
-        letter-spacing: 0px;
-      }
-      .intro .intro-left,
-      .intro .intro-right {
-        display: flex;
-        align-items: center;
-        width: 50%;
-      }
-      .intro .intro-left {
-        background-color: #c054ec;
-      }
-      .intro .intro-right {
-      }
-      .intro .intro-text {
-        height: 100%;
-        width: 100%;
-        color: #1c1b20;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .intro .intro-text h1 {
-        line-height: 120px;
-      }
-      .intro .intro-text h1 span {
-        color: #c054ec;
-      }
-
-      /* IMAGE */
-      .image {
-      }
-      .image img {
-        width: 100%;
-      }
-
-      /* PUNCTUATIONS */
-      .even {
-        background-color: #db96ed;
-      }
-      .odd {
-        background-color: #f4d6ed;
-      }
-      .even-comma {
-        color: #db96ed;
-      }
-      .odd-comma {
-        color: #f4d6ed;
-      }
-
-      /* BUTTON */
-      .button-container {
-        text-align: center;
-        background-color: #f8f8f8;
-        line-height: 40px;
-        width: 200px;
-        margin: auto;
-        border-radius: 4px;
-      }
-      .button-container a {
-        width: 200px;
-        color: #1c1b20;
-        text-decoration: none;
-        font-family: "Ubuntu Mono";
-        font-weight: 900;
-        display: inline-block;
-      }
-
-      /* SECTIONS */
-      .section {
-        width: 100%;
-      }
-      .section-header {
-        display: flex;
-        flex-flow: row;
-      }
-      .section-header h2 {
-        padding-right: 20px;
-        font-size: 68px;
-      }
-      .section-header-content {
-        height: 100%;
-      }
-      .section-header-left-40 {
-        width: 40%;
-      }
-      .section-header-left-40-content {
-        padding: 40px 20px 40px 280px;
-        text-decoration: underline;
-        text-decoration-color: #db96ed;
-      }
-      .section-header-left-60 {
-        width: 60%;
-      }
-      .section-header-left-60-content {
-        padding: 40px 20px 40px 280px;
-        text-decoration: underline;
-        text-decoration-color: #f4d6ed;
-      }
-      .section-header-right-40 {
-        width: 40%;
-      }
-      .section-header-right-60 {
-        width: 60%;
-      }
-      .section-content {
-        display: flex;
-        flex-flow: row;
-      }
-      .section-content {
-        height: 100%;
-      }
-      .section-content-left-40 {
-        width: 40%;
-        display: flex;
-        flex-grow: 1;
-      }
-      .section-content-left-40-content {
-        padding: 40px 20px 40px 280px;
-        flex-grow: 1;
-      }
-      .section-content-left-60 {
-        width: 60%;
-        display: flex;
-        flex-grow: 1;
-      }
-      .section-content-left-60-content {
-        padding: 40px 20px 40px 280px;
-        flex-grow: 1;
-      }
-      .section-content-right-40 {
-        width: 40%;
-        display: flex;
-        flex-grow: 1;
-      }
-      .section-content-right-40-content {
-        padding: 40px 280px 40px 20px;
-        flex-grow: 1;
-      }
-      .section-content-right-60 {
-        width: 60%;
-        display: flex;
-        flex-grow: 1;
-      }
-      .section-content-right-60-content {
-        padding: 40px 280px 40px 20px;
-        flex-grow: 1;
-      }
-      .section-footer {
-        height: 120px;
-      }
-      .item-name {
-        cursor: pointer;
-        display: inline-block;
-        padding: 8px;
-        margin: 4px;
-      }
-      .item-detail-title {
-        font-weight: 700;
-      }
-      .experience .active {
-        background-color: #f6c1a2;
-      }
-      .projects .active {
-        background-color: #eda49d;
-      }
-      .skills .active {
-        background-color: #f6c1a2;
-      }
-      .show {
-        display: block;
-      }
-      .hide {
-        display: none;
-      }
-
-      /* ABOUT */
-      .txt-rotate span {
-        padding: 4px;
-        background-color: #eda49d;
-      }
-
-      /* EXPERIENCE */
-
-      /* PROJECTS */
-      .projects-content-right-content {
-        padding-right: 480px;
-      }
-      .projects-content-img {
-        width: 680px;
-        position: absolute;
-        right: -220px;
-        margin-top: -180px;
-      }
-      .projects-content-img img {
-        width: 100%;
-        border-radius: 20px;
-      }
-
-      /* SKILLS */
-      .skill {
-        font-weight: 700;
-        padding: 12px;
-        margin: 8px;
-        display: inline-block;
-        background-color: #f8f8f8;
-      }
-
-      /* CONTACT */
-      .contact-header-left-content.section-header-left-60-content {
-        text-decoration-color: transparent !important;
-      }
-      .full-stop {
-        color: #c054ec;
-      }
-      .contact-header-left {
-        display: flex;
-      }
-      .contact-header-left-content {
-        height: 100%;
-        flex-grow: 1;
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-      .contact-header-right {
-        display: flex;
-      }
-      .contact-header-right-content {
-        flex-grow: 1;
-      }
-      .contact-svgs {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        height: 100%;
-      }
-      .contact-svg {
-        width: 40px;
-        margin: 8px;
-      }
-    </style>
+    <style></style>
 
     <script>
-      var TxtRotate = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 1000;
-        this.txt = "";
-        this.tick();
-        this.isDeleting = false;
-      };
-
-      TxtRotate.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-        var that = this;
-        var delta = 300 - Math.random() * 100;
-
-        if (this.isDeleting) {
-          delta /= 2;
-        }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-
-        setTimeout(function () {
-          that.tick();
-        }, delta);
-      };
-
-      window.onload = function () {
-        var elements = document.getElementsByClassName("txt-rotate");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-rotate");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML =
-          ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-        document.body.appendChild(css);
-      };
-
-      function selectProject(index) {
-        var itemNames = document.querySelectorAll(
-          ".projects-content-left-content .item-name"
-        );
-        var itemDetails = document.querySelectorAll(
-          ".projects-content-right-content .item-detail"
-        );
-        var itemImages = document.querySelectorAll(
-          ".projects-content.section-content .projects-content-img"
-        );
-        for (var i = 0; i < itemNames.length; i++) {
-          if (index === i) {
-            itemNames[i].classList.add("active");
-
-            itemDetails[i].classList.remove("hide");
-
-            itemImages[i].classList.add("show");
-            itemImages[i].classList.remove("hide");
-          } else {
-            itemNames[i].classList.remove("active");
-
-            itemDetails[i].classList.add("hide");
-
-            itemImages[i].classList.remove("show");
-            itemImages[i].classList.add("hide");
-          }
-        }
-      }
-
-      function selectExperience(index) {
-        var itemNames = document.querySelectorAll(
-          ".experience-content-right-content .item-name"
-        );
-        var itemDetails = document.querySelectorAll(
-          ".experience-content-left-content .item-detail"
-        );
-
-        for (var i = 0; i < itemNames.length; i++) {
-          if (index === i) {
-            itemNames[i].classList.add("active");
-
-            itemDetails[i].classList.remove("hide");
-          } else {
-            itemNames[i].classList.remove("active");
-
-            itemDetails[i].classList.add("hide");
-          }
-        }
-      }
-
-      function selectSkills(index) {
-        var itemNames = document.querySelectorAll(
-          ".skills-content-right-content .item-name"
-        );
-        var itemDetails = document.querySelectorAll(
-          ".skills-content-left-content .item-detail"
-        );
-
-        for (var i = 0; i < itemNames.length; i++) {
-          if (index === i) {
-            itemNames[i].classList.add("active");
-
-            itemDetails[i].classList.remove("hide");
-          } else {
-            itemNames[i].classList.remove("active");
-
-            itemDetails[i].classList.add("hide");
-          }
-        }
-      }
+      AOS.init({ duration: 1000 });
+      var controller = new ScrollMagic.Controller();
     </script>
 
     <div class="content">
@@ -441,25 +37,23 @@
           <div class="intro-left"></div>
           <div class="intro-right"></div>
           <div class="intro-text">
-            <h1>hello<br />world<span>;</span></h1>
+            <h1>hello<br />world<span class="semi-colon">;</span></h1>
+            <!-- <h1><span class="bracket">&lt; </span>hello<br />world<span class="semi-colon">;</span><span class="bracket">/&gt;</span></h1> -->
           </div>
         </div>
       </div>
 
-      <!-- INSERT GRAPHICS HERE -->
-      <!-- <div class="image">
+      <div class="image">
         <img
           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F001%2F233%2F761%2Foriginal%2Fmale-cartoon-programmer-working-on-bug-detection-vector.jpg&f=1&nofb=1"
           alt="about"
         />
-      </div> -->
+      </div>
 
-      <div class="about section">
+      <div class="about section" id="about">
         <div class="about-header section-header">
           <div class="about-header-left section-header-left-40">
-            <div
-              class="about-header-left-content section-header-left-40-content"
-            >
+            <div class="about-header-left-content section-header-left-40-content">
               <h2>about<span class="even-comma">,</span></h2>
             </div>
           </div>
@@ -467,9 +61,7 @@
         </div>
         <div class="about-content section-content">
           <div class="about-content-left section-content-left-40">
-            <div
-              class="about-content-left-content section-content-left-40-content"
-            >
+            <div class="about-content-left-content section-content-left-40-content">
               <h3>
                 I am
                 <div
@@ -481,23 +73,16 @@
             </div>
           </div>
 
-          <div class="about-content-right section-content-right-60 even">
-            <div
-              class="
-                about-content-right-content
-                section-content-right-60-content
-              "
-            >
+          <div class="about-content-right section-content-right-60 even" data-aos="fade-left">
+            <div class="about-content-right-content section-content-right-60-content">
               <h5>Hi, I'm Jun Xiong.</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                ultricies, est in malesuada dictum, nisi eros fringilla nisl, id
-                viverra quam leo at tortor. Sed augue ipsum, dignissim nec lacus
-                quis, venenatis feugiat lorem. Cras neque sem, blandit sed
-                efficitur ac, pellentesque in tortor. Fusce molestie laoreet
-                ligula, ut consequat diam sagittis et. Pellentesque varius
-                iaculis mi, sed ultrices nulla tempor a. Etiam ullamcorper erat
-                urna, ac iaculis odio euismod sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
+                malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Sed augue
+                ipsum, dignissim nec lacus quis, venenatis feugiat lorem. Cras neque sem, blandit
+                sed efficitur ac, pellentesque in tortor. Fusce molestie laoreet ligula, ut
+                consequat diam sagittis et. Pellentesque varius iaculis mi, sed ultrices nulla
+                tempor a. Etiam ullamcorper erat urna, ac iaculis odio euismod sit amet.
               </p>
             </div>
           </div>
@@ -509,65 +94,45 @@
       <div class="experience section">
         <div class="experience-header section-header">
           <div class="experience-header-left section-header-left-60">
-            <div
-              class="
-                experience-header-left-content
-                section-header-left-60-content
-              "
-            >
+            <div class="experience-header-left-content section-header-left-60-content">
               <h2>experience<span class="odd-comma">,</span></h2>
             </div>
           </div>
           <div class="experience-header-right section-header-right-40"></div>
         </div>
         <div class="experience-content section-content">
-          <div class="experience-content-left section-content-left-60">
-            <div
-              class="
-                experience-content-left-content
-                section-content-left-60-content
-                odd
-              "
-            >
+          <div class="experience-content-left section-content-left-60" data-aos="fade-right">
+            <div class="experience-content-left-content section-content-left-60-content odd">
               <div class="item-detail">
                 <p class="item-detail-title">Jan 2021 - Aug 2021</p>
 
                 <p>
-                  1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer ultricies, est in malesuada dictum, nisi eros
-                  fringilla nisl, id viverra quam leo at tortor. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit. Integer
-                  ultricies, est in malesuada dictum, nisi eros fringilla nisl,
-                  id viverra quam leo at tortor. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam
-                  leo at tortor.
+                  1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est
+                  in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
+                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
+                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
                 </p>
               </div>
               <div class="item-detail hide">
                 <p class="item-detail-title">Jan 2020 - May 2020</p>
 
                 <p>
-                  I taught CS2040, Programming Methodology II, to
-                  undergraduates. Responsibilities include preparing lab briefs,
-                  reviewing students' lab exercises, and providing feedback as
-                  well as guidance for students.
+                  I taught CS2040, Programming Methodology II, to undergraduates. Responsibilities
+                  include preparing lab briefs, reviewing students' lab exercises, and providing
+                  feedback as well as guidance for students.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="experience-content-right section-content-right-40">
-            <div
-              class="
-                experience-content-right-content
-                section-content-right-40-content
-              "
-            >
-              <h5 class="item-name active" onclick="selectExperience(0)">
+            <div class="experience-content-right-content section-content-right-40-content">
+              <h5 class="item-name active" onclick="selectExperience(0)" data-aos="flip-up">
                 software dev intern @ VIVITA Singapore
               </h5>
-              <h5 class="item-name" onclick="selectExperience(1)">
+              <h5 class="item-name" onclick="selectExperience(1)" data-aos="flip-up">
                 teaching assistant @ NUS
               </h5>
             </div>
@@ -580,12 +145,7 @@
       <div class="projects section">
         <div class="projects-header section-header">
           <div class="projects-header-left section-header-left-40">
-            <div
-              class="
-                projects-header-left-content
-                section-header-left-40-content
-              "
-            >
+            <div class="projects-header-left-content section-header-left-40-content">
               <h2>projects<span class="even-comma">,</span></h2>
             </div>
           </div>
@@ -593,60 +153,39 @@
         </div>
         <div class="projects-content section-content">
           <div class="projects-content-left section-content-left-40">
-            <div
-              class="
-                projects-content-left-content
-                section-content-left-40-content
-              "
-            >
-              <h5 class="item-name active" onclick="selectProject(0)">
+            <div class="projects-content-left-content section-content-left-40-content">
+              <h5 class="item-name active" onclick="selectProject(0)" data-aos="flip-up">
                 VIVIBOOM
               </h5>
-              <h5 class="item-name" onclick="selectProject(1)">Pathfinder</h5>
-              <h5 class="item-name" onclick="selectProject(2)">Eldereach</h5>
-              <h5 class="item-name" onclick="selectProject(3)">wing it!</h5>
+              <h5 class="item-name" onclick="selectProject(1)" data-aos="flip-up">Pathfinder</h5>
+              <h5 class="item-name" onclick="selectProject(2)" data-aos="flip-up">Eldereach</h5>
+              <h5 class="item-name" onclick="selectProject(3)" data-aos="flip-up">wing it!</h5>
             </div>
           </div>
 
-          <div class="projects-content-right section-content-right-60 even">
-            <div
-              class="
-                projects-content-right-content
-                section-content-right-60-content
-              "
-            >
+          <div class="projects-content-right section-content-right-60 even" data-aos="fade-left">
+            <div class="projects-content-right-content section-content-right-60-content">
               <div class="item-detail">
-                <p class="item-detail-title">
-                  sample item title, Jan 2021 - Aug 2021
-                </p>
+                <p class="item-detail-title">sample item title, Jan 2021 - Aug 2021</p>
 
                 <p>
-                  1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer ultricies, est in malesuada dictum, nisi eros
-                  fringilla nisl, id viverra quam leo at tortor. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit. Integer
-                  ultricies, est in malesuada dictum, nisi eros fringilla nisl,
-                  id viverra quam leo at tortor. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam
-                  leo at tortor.
+                  1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est
+                  in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
+                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
+                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
                 </p>
 
-                <p class="code">
-                  Tech stack: Javascript, Node.js, ReactJS, MySQL, CSS, HTML,
-                  AWS
-                </p>
+                <p class="code">Tech stack: Javascript, Node.js, ReactJS, MySQL, CSS, HTML, AWS</p>
               </div>
 
               <div class="item-detail hide">
-                <p class="item-detail-title">
-                  a search algorithm visualiser, Jul 2020 - Aug 2020
-                </p>
+                <p class="item-detail-title">a search algorithm visualiser, Jul 2020 - Aug 2020</p>
 
                 <p>
-                  Pathfinder is an exploratory project in integrating frontend
-                  React development, and classic search algorithms, namely
-                  Dijkstra's algorithm and depth first search.
+                  Pathfinder is an exploratory project in integrating frontend React development,
+                  and classic search algorithms, namely Dijkstra's algorithm and depth first search.
                 </p>
 
                 <p class="code">Tech stack: Javascript, ReactJS, CSS, HTML</p>
@@ -657,16 +196,13 @@
               </div>
 
               <div class="item-detail hide">
-                <p class="item-detail-title">
-                  an Android app for the elderly, May 2020 - Jul 2020
-                </p>
+                <p class="item-detail-title">an Android app for the elderly, May 2020 - Jul 2020</p>
 
                 <p>
-                  Eldereach was provides needy elderly greater accessibility to
-                  services, and allows charity organizations and volunteers to
-                  source for opportunities to provide services to the elderly.
-                  It aims to connect the caregivers of the elderly with charity
-                  organizations.
+                  Eldereach was provides needy elderly greater accessibility to services, and allows
+                  charity organizations and volunteers to source for opportunities to provide
+                  services to the elderly. It aims to connect the caregivers of the elderly with
+                  charity organizations.
                 </p>
 
                 <p class="code">Tech stack: Java, Firebase, Firestore</p>
@@ -681,12 +217,10 @@
                 </p>
 
                 <p>
-                  An Android mobile application developed to help travellers
-                  create an itinerary which best allows them visit all their
-                  places of interest within the span of their travels. wing_it!
-                  allows users to indicate their desired duration to spend at a
-                  place of interest, and takes it into account when devising the
-                  itinerary.
+                  An Android mobile application developed to help travellers create an itinerary
+                  which best allows them visit all their places of interest within the span of their
+                  travels. wing_it! allows users to indicate their desired duration to spend at a
+                  place of interest, and takes it into account when devising the itinerary.
                 </p>
 
                 <p class="code">Tech stack: Java, Google Maps API</p>
@@ -697,17 +231,19 @@
             </div>
           </div>
 
-          <div class="projects-content-img">
-            <img src="./assets/project-boom.png" alt="viviboom" />
-          </div>
-          <div class="projects-content-img hide">
-            <img src="./assets/project-pathfinder.png" alt="pathfinder" />
-          </div>
-          <div class="projects-content-img hide">
-            <img src="./assets/project-eldereach.png" alt="eldereach" />
-          </div>
-          <div class="projects-content-img hide">
-            <img src="./assets/project-wing-it.png" alt="wing-it" />
+          <div data-aos="fade-left">
+            <div class="projects-content-img">
+              <img src="./assets/project-boom.png" alt="viviboom" />
+            </div>
+            <div class="projects-content-img hide">
+              <img src="./assets/project-pathfinder.png" alt="pathfinder" />
+            </div>
+            <div class="projects-content-img hide">
+              <img src="./assets/project-eldereach.png" alt="eldereach" />
+            </div>
+            <div class="projects-content-img hide">
+              <img src="./assets/project-wing-it.png" alt="wing-it" />
+            </div>
           </div>
         </div>
 
@@ -717,23 +253,15 @@
       <div class="skills section">
         <div class="skills-header section-header">
           <div class="skills-header-left section-header-left-60">
-            <div
-              class="skills-header-left-content section-header-left-60-content"
-            >
+            <div class="skills-header-left-content section-header-left-60-content">
               <h2>skills<span class="odd-comma">,</span></h2>
             </div>
           </div>
           <div class="skills-header-right section-header-right-40"></div>
         </div>
         <div class="skills-content section-content">
-          <div class="skills-content-left section-content-left-60">
-            <div
-              class="
-                skills-content-left-content
-                section-content-left-60-content
-                odd
-              "
-            >
+          <div class="skills-content-left section-content-left-60" data-aos="fade-right">
+            <div class="skills-content-left-content section-content-left-60-content odd">
               <div class="item-detail">
                 <p class="code skill">Javascript</p>
                 <p class="code skill">Node.js</p>
@@ -756,25 +284,30 @@
                 <p class="code skill">Android Studio</p>
                 <p class="code skill">Vue.js</p>
                 <p class="code skill">C/C++</p>
-                <p class="code skill">
-                  AWS (Elastic Beanstalk, Relational Database, Amplify)
-                </p>
+                <p class="code skill">AWS (Elastic Beanstalk, Relational Database, Amplify)</p>
               </div>
             </div>
           </div>
 
           <div class="skills-content-right section-content-right-40">
-            <div
-              class="
-                skills-content-right-content
-                section-content-right-40-content
-              "
-            >
-              <h5 class="item-name active" onclick="selectSkills(0)">
+            <div class="skills-content-right-content section-content-right-40-content">
+              <h5 class="item-name active" onclick="selectSkills(0)" data-aos="flip-up">
                 Proficient
               </h5>
-              <h5 class="item-name" onclick="selectSkills(1)">Familiar</h5>
-              <h5 class="item-name" onclick="selectSkills(2)">Basic</h5>
+              <h5
+                class="item-name"
+                onclick="selectSkills(1)"
+                data-aos="flip-up"
+              >
+                Familiar
+              </h5>
+              <h5
+                class="item-name"
+                onclick="selectSkills(2)"
+                data-aos="flip-up"
+              >
+                Basic
+              </h5>
             </div>
           </div>
         </div>
@@ -785,38 +318,20 @@
       <div class="contact section">
         <div class="contact-header section-header">
           <div class="contact-header-left section-header-left-60">
-            <div
-              class="contact-header-left-content section-header-left-60-content"
-            >
+            <div class="contact-header-left-content section-header-left-60-content">
               <h4>get in touch<span class="full-stop">.</span></h4>
             </div>
           </div>
 
           <div class="contact-header-left section-header-right-40">
-            <div
-              class="
-                contact-header-left-content
-                section-header-right-40-content
-              "
-            >
+            <div class="contact-header-left-content section-header-right-40-content">
               <div class="contact-svgs">
-                <a
-                  ><img
-                    class="contact-svg"
-                    src="./assets/icon-email.svg"
-                    alt="email"
-                /></a>
+                <a><img class="contact-svg" src="./assets/icon-email.svg" alt="email" /></a>
                 <a href="https://github.com/teo-jun-xiong"
-                  ><img
-                    class="contact-svg"
-                    src="./assets/icon-github.svg"
-                    alt="github"
+                  ><img class="contact-svg" src="./assets/icon-github.svg" alt="github"
                 /></a>
                 <a href="https://linkedin.com/in/teo-jun-xiong"
-                  ><img
-                    class="contact-svg"
-                    src="./assets/icon-linkedin.svg"
-                    alt="linkedin"
+                  ><img class="contact-svg" src="./assets/icon-linkedin.svg" alt="linkedin"
                 /></a>
               </div>
             </div>
@@ -824,5 +339,33 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var mouseTopPerc = 0;
+      function getMousePos() {
+        return mouseTopPerc * 400 + 400;
+      }
+      $("body").on("mousemove", function (e) {
+        mouseTopPerc = e.clientY / $(this).innerHeight();
+      });
+
+      var tween = TweenMax.to(".intro-left", 2, { x: "50%" });
+      var scene = new ScrollMagic.Scene({
+        triggerElement: ".image",
+        duration: getMousePos,
+        offset: -400,
+      })
+        .setTween(tween)
+        .addTo(controller);
+
+      tween = TweenMax.to(".intro-text", 1, { x: -0.5 * $(this).innerWidth() + 480, y: "24%" });
+      scene = new ScrollMagic.Scene({
+        triggerElement: ".image",
+        duration: getMousePos,
+        offset: -400,
+      })
+        .setTween(tween)
+        .addTo(controller);
+    </script>
   </body>
 </html>
