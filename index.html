@@ -64,7 +64,8 @@
 
               <script>
                 function removeActive() {
-                  document.querySelector(".hamburger").classList.remove("active");document.querySelector(".nav-list").classList.remove("active");
+                  document.querySelector(".hamburger").classList.remove("active");
+                  document.querySelector(".nav-list").classList.remove("active");
                 }
 
                 $(".nav-about").click(function () {
@@ -73,7 +74,8 @@
                       scrollTop: $(".about").offset().top,
                     },
                     "slow"
-                  );removeActive()
+                  );
+                  removeActive();
                 });
 
                 $(".nav-experience").click(function () {
@@ -82,7 +84,8 @@
                       scrollTop: $(".experience").offset().top,
                     },
                     "slow"
-                  );removeActive()
+                  );
+                  removeActive();
                 });
 
                 $(".nav-projects").click(function () {
@@ -91,7 +94,8 @@
                       scrollTop: $(".projects").offset().top,
                     },
                     "slow"
-                  );removeActive()
+                  );
+                  removeActive();
                 });
 
                 $(".nav-skills").click(function () {
@@ -100,7 +104,8 @@
                       scrollTop: $(".skills").offset().top,
                     },
                     "slow"
-                  );removeActive()
+                  );
+                  removeActive();
                 });
 
                 $(".nav-contact").click(function () {
@@ -109,7 +114,8 @@
                       scrollTop: $(".contact").offset().top,
                     },
                     "slow"
-                  );removeActive()
+                  );
+                  removeActive();
                 });
               </script>
 
@@ -556,7 +562,7 @@
                 </div>
               </div>
 
-              <div class="projects-content-imgs" data-aos="fade-left">
+              <div class="projects-content-imgs">
                 <div class="projects-content-img">
                   <img src="./assets/project-boom.png" alt="viviboom" />
                 </div>
@@ -638,8 +644,8 @@
               </div>
             </div>
 
-            <div class="contact-header-left section-header-right-40">
-              <div class="contact-header-left-content section-header-right-40-content">
+            <div class="contact-header-right section-header-right-40">
+              <div class="contact-header-right-content section-header-right-40-content">
                 <div class="contact-svgs">
                   <a href="https://github.com/teo-jun-xiong"
                     ><img class="contact-svg" src="./assets/icon-github.svg" alt="github"

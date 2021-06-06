@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Righteous&family=Ubuntu+Mono&display=swap");
 
-.wrapper {
-  overflow-x:hidden;
+.wrapper,
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
 }
 body {
   margin: 0;
   background-color: #3b4253;
   word-break: keep-all;
-  overflow-x: hidden;
   width: 100vw;
   color: #e5e9f0;
 }
@@ -91,7 +93,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #72FACA;
+  background-color: #72faca;
   left: 0;
   bottom: 0;
   transform: scaleX(0);
@@ -184,26 +186,6 @@ nav {
   transition-delay: 0.5s;
 }
 
-@media screen and (max-width: 600px) {
-  .nav-list {
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(31,36,48);
-    position: fixed;
-    left: 50%;
-    padding: 0;
-    transform: translateX(-50%);
-    bottom: -100vh;
-    transition: bottom 650ms;
-  }
-
-  .nav-list.active {
-    bottom: 0;
-  }
-}
 .intro {
   display: flex;
   flex-flow: column;
@@ -445,7 +427,7 @@ img {
   color: #e5e9f0;
 }
 .item-name.active {
-  color: #D3FBD8;
+  color: #d3fbd8;
 }
 .item-detail-title {
   font-weight: 700;
@@ -478,10 +460,13 @@ img {
 }
 
 /* ABOUT */
+.txt-rotate {
+  margin: 4px 0;
+}
 .txt-rotate span {
   padding: 4px;
   background-color: #1f2430;
-  color: #D3FBD8;
+  color: #d3fbd8;
 }
 
 /* EXPERIENCE */
@@ -533,8 +518,7 @@ img {
 .contact-header-left-content {
   height: 100%;
   flex-grow: 1;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 20px 240px;
 }
 .contact-header-right {
   display: flex;
@@ -610,6 +594,7 @@ img {
   .section-content-right-60-content {
     padding: 40px 120px 40px 20px;
   }
+
   .projects-content-right {
     flex-flow: column;
   }
@@ -629,7 +614,7 @@ img {
     margin-bottom: -20px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .section-content {
     flex-flow: column;
   }
@@ -650,13 +635,16 @@ img {
     flex-flow: column-reverse;
   }
   .projects-content-imgs {
-    height: 200px;
+    /* height: 200px; */
   }
   .projects-content-img {
     width: 480px;
   }
 }
-@media screen and (max-width: 600px) {
+.contact-header-left-content {
+  padding: 0px 120px;
+}
+@media screen and (max-width: 1000px) {
   .section-header-left-40-content {
     padding: 40px 20px 40px 40px;
   }
@@ -670,13 +658,54 @@ img {
     padding: 20px 40px;
   }
   .section-header-svg {
-    height: 80px;
+    height: 60px;
   }
   .header {
     padding: 20px 40px;
-
   }
   .header h5 {
     font-size: 16px;
+  }
+  .projects-content-img {
+    right: -28%;
+    width: 100%;
+  }
+  .contact-header-left-content {
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 36, 48);
+    position: fixed;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+    bottom: -100vh;
+    transition: bottom 650ms;
+  }
+
+  .nav-list.active {
+    bottom: 0;
+  }
+  .contact-header {
+    flex-flow: column;
+  }
+  .contact-header-left,
+  .contact-header-right {
+    width: 100%;
+  }
+  .about-content-left-content h3{
+    font-size:32px;
+  }
+  .txt-rotate {
+    font-size: 28px;
   }
 }
