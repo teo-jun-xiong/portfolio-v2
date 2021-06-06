@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teo Jun Xiong</title>
+    <title>Teo Jun Xiong | Portfolio</title>
     <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
 
     <link rel="stylesheet" href="./css/styles.css" />
@@ -14,26 +14,16 @@
     <script src="js/list-items-selector.js"></script>
     <script src="js/typing-animation.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/ScrollMagic.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/animation.velocity.min.js"></script>
-    <script src="js/animation.gsap.min.js"></script>
-    <script src="js/debug.addIndicators.min.js"></script>
+
     <script src="js/aos.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
-      integrity="sha512-NBLGIjYyAoYAr23l+dmAcUv7TvFj0XrqZoFa4i1o+F2VvF9SrERyMD8BHNnJn1SEGjl1AouBDcCv/q52L3ozBQ=="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <div class="wrapper">
     <body>
       <style></style>
 
       <script>
-        AOS.init({ duration: 1000 });
-        var controller = new ScrollMagic.Controller();
-      </script>
+        AOS.init({ duration: 600 });
+       </script>
 
       <div class="content">
         <div class="landing">
@@ -64,8 +54,12 @@
 
               <script>
                 function removeActive() {
-                  document.querySelector(".hamburger").classList.remove("active");
-                  document.querySelector(".nav-list").classList.remove("active");
+                  document
+                    .querySelector(".hamburger")
+                    .classList.remove("active");
+                  document
+                    .querySelector(".nav-list")
+                    .classList.remove("active");
                 }
 
                 $(".nav-about").click(function () {
@@ -149,7 +143,11 @@
                 let replaySvg = document.querySelector(".terminal-replay");
                 replaySvg.classList.remove("scale-in-center");
                 replaySvg.classList.add("rotate-out-center");
-                let terminals = [...document.querySelectorAll(".intro .intro-terminal .terminal")];
+                let terminals = [
+                  ...document.querySelectorAll(
+                    ".intro .intro-terminal .terminal"
+                  ),
+                ];
                 let totalTerminals = terminals.length;
 
                 terminals[0].classList.add("terminal-show");
@@ -279,7 +277,13 @@
                     stroke-width="3"
                     rx="36"
                   />
-                  <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
+                  <circle
+                    class="scroll"
+                    cx="36.5"
+                    cy="31.5"
+                    r="4.5"
+                    fill="#FFF"
+                  />
                 </g>
               </svg>
             </a>
@@ -292,12 +296,13 @@
           jQuery(document).ready(function ($) {
             $("a.scroll-link").click(function (e) {
               e.preventDefault();
+              console.log($(this))
               $id = $(this).attr("href");
               $("body,html").animate(
                 {
-                  scrollTop: $($id).offset().top - 20,
+                  scrollTop: $(".about").offset().top - 20,
                 },
-                750
+                100
               );
             });
           });
@@ -320,13 +325,11 @@
             $(window).scroll(function () {
               var yPos = $(window).scrollTop();
 
-              if (yPos > $(window).height()/2) {
+              if (yPos > $(window).height() / 2) {
                 // Show element after this amount of scrolled down pixels
                 $(".back-to-top").fadeIn();
-
               } else {
                 $(".back-to-top").fadeOut();
-
               }
             });
           });
@@ -340,13 +343,14 @@
           }
 
           async function animateTerminal() {
-            let terminals = [...document.querySelectorAll(".intro .intro-terminal .terminal")];
+            let terminals = [
+              ...document.querySelectorAll(".intro .intro-terminal .terminal"),
+            ];
             let curr = 0;
             let totalTerminals = terminals.length;
             await delay(1000);
 
             while (true) {
-              console.log(curr);
               if (curr === totalTerminals - 1) break;
 
               if (curr === 8 || curr === 17) {
@@ -385,7 +389,9 @@
         <div class="about section" id="#about">
           <div class="about-header section-header">
             <div class="about-header-left section-header-left-40">
-              <div class="about-header-left-content section-header-left-40-content">
+              <div
+                class="about-header-left-content section-header-left-40-content"
+              >
                 <!-- <h2>about<span class="even-comma">,</span></h2> -->
 
                 <img class="section-header-svg" src="assets/svg-about.svg" />
@@ -395,28 +401,51 @@
           </div>
           <div class="about-content section-content">
             <div class="about-content-left section-content-left-40">
-              <div class="about-content-left-content section-content-left-40-content">
+              <div
+                class="
+                  about-content-left-content
+                  section-content-left-40-content
+                "
+              >
                 <h3>
                   I am
                   <div
                     class="txt-rotate"
                     data-period="100"
-                    data-rotate='["a fullstack dev", "ambitious", "always learning", "motivated"]'
+                    data-rotate='["a fullstack dev", "ambitious", "always learning", "motivated", "perseverant"]'
                   ></div>
                 </h3>
               </div>
             </div>
 
-            <div class="about-content-right section-content-right-60 even" data-aos="fade-left">
-              <div class="about-content-right-content section-content-right-60-content">
+            <div
+              class="about-content-right section-content-right-60 even"
+              data-aos="fade-left"
+            >
+              <div
+                class="
+                  about-content-right-content
+                  section-content-right-60-content
+                "
+              >
                 <h5>Hi, I'm Jun Xiong.</h5>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Sed
-                  augue ipsum, dignissim nec lacus quis, venenatis feugiat lorem. Cras neque sem,
-                  blandit sed efficitur ac, pellentesque in tortor. Fusce molestie laoreet ligula,
-                  ut consequat diam sagittis et. Pellentesque varius iaculis mi, sed ultrices nulla
-                  tempor a. Etiam ullamcorper erat urna, ac iaculis odio euismod sit amet.
+                  I am a final year computer science student at the National
+                  University of Singapore, with a strong interest in the
+                  development of products and ideas. I have experience in
+                  fullstack web development, Android app development, artificial
+                  learning, and machine learning.
+                </p>
+
+                <p>
+                  I am steadfast and work well under pressure, and employ a
+                  creative and efficient methodology in software development.
+                </p>
+
+                <p>
+                  I work well in teams, and by myself, and maintain focus when
+                  working towards a goal. I am always keen in learning new
+                  skills to develop ideas that benefit others, or are just fun!
                 </p>
               </div>
             </div>
@@ -428,47 +457,105 @@
         <div class="experience section">
           <div class="experience-header section-header">
             <div class="experience-header-left section-header-left-60">
-              <div class="experience-header-left-content section-header-left-60-content">
+              <div
+                class="
+                  experience-header-left-content
+                  section-header-left-60-content
+                "
+              >
                 <!-- <h2>experience<span class="odd-comma">,</span></h2> -->
-                <img class="section-header-svg" src="assets/svg-experience.svg" />
+                <img
+                  class="section-header-svg"
+                  src="assets/svg-experience.svg"
+                />
               </div>
             </div>
             <div class="experience-header-right section-header-right-40"></div>
           </div>
           <div class="experience-content section-content">
-            <div class="experience-content-left section-content-left-60" data-aos="fade-right">
-              <div class="experience-content-left-content section-content-left-60-content odd">
+            <div
+              class="experience-content-left section-content-left-60"
+              data-aos="fade-right"
+            >
+              <div
+                class="
+                  experience-content-left-content
+                  section-content-left-60-content
+                  odd
+                "
+              >
                 <div class="item-detail">
-                  <p class="item-detail-title">Jan 2021 - Aug 2021</p>
+                  <p class="item-detail-title">Jan 2021 - Present</p>
 
                   <p>
-                    1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies,
-                    est in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at
-                    tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
-                    leo at tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
-                    leo at tortor.
+                    I am with VIVITA Singapore for my NUS ATAP internship.
+                    VIVITA Singapore is a creativity accelerator for children
+                    between the ages of 9 and 16, and it aims to empower kids
+                    through free-flow sessions and guided workshops. The members
+                    are able to create anything from iOS applications,
+                    conversational (dialect) robots, intricate 3D-printed
+                    models, to even huge furniture.
+                  </p>
+
+                  <p>
+                    The core product I worked on was VIVIBOOM (described in
+                    greater detail below), which served as VIVITA Singapore's
+                    online presence, to empower children even when they are not
+                    physically at the maker space. VIVIBOOM allows the members
+                    to share their projects, learn from each other, and aims to
+                    be the one-stop website for all things related to VIVITA.
+                  </p>
+
+                  <p>
+                    I did fullstack development during my time at VIVITA, and
+                    had experience doing frontend and backend development, as
+                    well as UI/UX design and user testing.
+                  </p>
+
+                  <p>
+                    I also designed and developed a WordPress site to showcase
+                    and promote VIVIPAL, an initiative to promote cross-border
+                    penpalling.
                   </p>
                 </div>
                 <div class="item-detail hide">
                   <p class="item-detail-title">Jan 2020 - May 2020</p>
 
                   <p>
-                    I taught CS2040, Programming Methodology II, to undergraduates. Responsibilities
-                    include preparing lab briefs, reviewing students' lab exercises, and providing
+                    I taught CS2030, Programming Methodology II, to
+                    undergraduates. Responsibilities include preparing lab
+                    briefs, reviewing students' lab exercises, and providing
                     feedback as well as guidance for students.
+                  </p>
+
+                  <p>
+                    The key content for the module were two key programming
+                    paradigms: object-oriented Programming, and functional
+                    programming.
                   </p>
                 </div>
               </div>
             </div>
 
             <div class="experience-content-right section-content-right-40">
-              <div class="experience-content-right-content section-content-right-40-content">
-                <h5 class="item-name active" onclick="selectExperience(0)" data-aos="flip-up">
+              <div
+                class="
+                  experience-content-right-content
+                  section-content-right-40-content
+                "
+              >
+                <h5
+                  class="item-name active"
+                  onclick="selectExperience(0)"
+                  data-aos="flip-up"
+                >
                   software dev intern @ VIVITA Singapore
                 </h5>
-                <h5 class="item-name" onclick="selectExperience(1)" data-aos="flip-up">
+                <h5
+                  class="item-name"
+                  onclick="selectExperience(1)"
+                  data-aos="flip-up"
+                >
                   teaching assistant @ NUS
                 </h5>
               </div>
@@ -481,7 +568,12 @@
         <div class="projects section">
           <div class="projects-header section-header">
             <div class="projects-header-left section-header-left-40">
-              <div class="projects-header-left-content section-header-left-40-content">
+              <div
+                class="
+                  projects-header-left-content
+                  section-header-left-40-content
+                "
+              >
                 <!-- <h2>projects<span class="even-comma">,</span></h2> -->
                 <img class="section-header-svg" src="assets/svg-projects.svg" />
               </div>
@@ -490,48 +582,120 @@
           </div>
           <div class="projects-content section-content">
             <div class="projects-content-left section-content-left-40">
-              <div class="projects-content-left-content section-content-left-40-content">
-                <h5 class="item-name active" onclick="selectProject(0)" data-aos="flip-up">
+              <div
+                class="
+                  projects-content-left-content
+                  section-content-left-40-content
+                "
+              >
+                <h5
+                  class="item-name active"
+                  onclick="selectProject(0)"
+                  data-aos="flip-up"
+                >
                   VIVIBOOM
                 </h5>
-                <h5 class="item-name" onclick="selectProject(1)" data-aos="flip-up">Pathfinder</h5>
-                <h5 class="item-name" onclick="selectProject(2)" data-aos="flip-up">Eldereach</h5>
-                <h5 class="item-name" onclick="selectProject(3)" data-aos="flip-up">wing it!</h5>
+                <h5
+                  class="item-name"
+                  onclick="selectProject(1)"
+                  data-aos="flip-up"
+                >
+                  Pathfinder
+                </h5>
+                <h5
+                  class="item-name"
+                  onclick="selectProject(2)"
+                  data-aos="flip-up"
+                >
+                  Eldereach
+                </h5>
+                <h5
+                  class="item-name"
+                  onclick="selectProject(3)"
+                  data-aos="flip-up"
+                >
+                  wing it!
+                </h5>
               </div>
             </div>
 
-            <div class="projects-content-right section-content-right-60 even" data-aos="fade-left">
-              <div class="projects-content-right-content section-content-right-60-content">
+            <div
+              class="projects-content-right section-content-right-60 even"
+              data-aos="fade-left"
+            >
+              <div
+                class="
+                  projects-content-right-content
+                  section-content-right-60-content
+                "
+              >
                 <div class="item-detail">
-                  <p class="item-detail-title">sample item title, Jan 2021 - Aug 2021</p>
-
-                  <p>
-                    1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies,
-                    est in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at
-                    tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
-                    leo at tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
-                    leo at tortor.
+                  <p class="item-detail-title">
+                    An all-in-one membership portal, Jan 2021 - Present
                   </p>
 
+                  <p>
+                    VIVIBOOM is a membership portal for members (between ages 9
+                    to 16) of VIVITA Singapore. It is an educational portal for
+                    members to share their projects, and to pick up new skills.
+                  </p>
+
+                  <p>
+                    It contains a skill badges system, a project management
+                    system, and a booking system to supplement the members'
+                    learning, as well as to help develop their creativity.
+                  </p>
+
+                  <p>
+                    I am involved in the development of all three aforementioned
+                    systems, and built the booking system API, and management
+                    system from scratch. During the development process of
+                    VIVIBOOM, I had the experience of frontend and backend
+                    development, UI/UX design, as well as devops with AWS.
+                  </p>
+
+                  <p>
+                    Other features I've developed are:
+                    <ul>
+                      <li><p>An animated badge randomiser</p></li>
+                      <li><p>Automated booking emails</p></li>
+                      <li><p>Custom email templates for booking emails</p></li>
+                      <li><p>Project categories system</p></li>
+                      <li><p>Data processing using Python Pandas</p></li>
+                      <li><p>Set up a test environment for VIVIBOOM using AWS</p></li>
+                    </ul>
+                  </p>
+
+
+                  <p>
+                    Since the launch of VIVIBOOM, almost 100 projects have been
+                    uploaded by members, and hundreds of bookings have been made
+                    on VIVIBOOM's booking system. Being VIVITA's online
+                    membership portal, it has allowed VIVITA to continue
+                    empowering its members digitally, admist pandemic dangers
+                    and government restrictions.
+                  </p>
                   <p class="code">
-                    Tech stack: Javascript, Node.js, ReactJS, MySQL, CSS, HTML, AWS
+                    Tech stack: Javascript, Node.js, ReactJS, MySQL, CSS, HTML,
+                    AWS
                   </p>
                 </div>
 
                 <div class="item-detail hide">
                   <p class="item-detail-title">
-                    a search algorithm visualiser, Jul 2020 - Aug 2020
+                    A search algorithm visualiser, Jul 2020 - Aug 2020
                   </p>
 
                   <p>
-                    Pathfinder is an exploratory project in integrating frontend React development,
-                    and classic search algorithms, namely Dijkstra's algorithm and depth first
-                    search.
+                    Pathfinder is an exploratory project in integrating frontend
+                    React development, and classic search algorithms, namely
+                    Dijkstra's algorithm and depth first search.
                   </p>
 
-                  <p></p>
+                  <p>
+                    Pathfinder allows the generation of walls to create various
+                    desired 'mazes'.
+                  </p>
 
                   <p class="code">Tech stack: Javascript, ReactJS, CSS, HTML</p>
 
@@ -542,17 +706,27 @@
 
                 <div class="item-detail hide">
                   <p class="item-detail-title">
-                    an Android app for the elderly, May 2020 - Jul 2020
+                    An Android app for the elderly, May 2020 - Jul 2020
                   </p>
 
                   <p>
-                    Eldereach was provides needy elderly greater accessibility to services, and
-                    allows charity organizations and volunteers to source for opportunities to
-                    provide services to the elderly. It aims to connect the caregivers of the
-                    elderly with charity organizations.
+                    Eldereach was provides needy elderly greater accessibility
+                    to services, and allows charity organizations and volunteers
+                    to source for opportunities to provide services to the
+                    elderly. It aims to connect the caregivers of the elderly
+                    with charity organizations.
                   </p>
 
-                  <p class="code">Tech stack: Java, Firebase, Firestore</p>
+                  <p>
+                    Eldereach has built-in systems for requesting food aid,
+                    transport services, and visits from eldery care workers. It
+                    integrates Google Maps API for transport services requests,
+                    and uses Firestore for authentication.
+                  </p>
+
+                  <p class="code">
+                    Tech stack: Java, Google Maps API, Firebase, Firestore
+                  </p>
                   <div class="button-container hover-shadow">
                     <a href="#">view &lt; Eldereach /&gt;</a>
                   </div>
@@ -564,10 +738,19 @@
                   </p>
 
                   <p>
-                    An Android mobile application developed to help travellers create an itinerary
-                    which best allows them visit all their places of interest within the span of
-                    their travels. wing_it! allows users to indicate their desired duration to spend
-                    at a place of interest, and takes it into account when devising the itinerary.
+                    wing it! is an Android mobile application developed to help
+                    travellers create an itinerary which best allows them visit
+                    all their places of interest within the span of their
+                    travels. wing_it! allows users to indicate their desired
+                    duration to spend at a place of interest, and takes it into
+                    account when devising the itinerary.
+                  </p>
+
+                  <p>
+                    wing it! uses an all-path shortest path algorithm to map out
+                    the most efficient route the user can take to visit all
+                    their places of interest, spend their desired duration
+                    there, within the span of their travels.
                   </p>
 
                   <p class="code">Tech stack: Java, Google Maps API</p>
@@ -600,7 +783,12 @@
         <div class="skills section">
           <div class="skills-header section-header">
             <div class="skills-header-left section-header-left-60">
-              <div class="skills-header-left-content section-header-left-60-content">
+              <div
+                class="
+                  skills-header-left-content
+                  section-header-left-60-content
+                "
+              >
                 <!-- <h2>skills<span class="odd-comma">,</span></h2> -->
                 <img class="section-header-svg" src="assets/svg-skills.svg" />
               </div>
@@ -608,8 +796,17 @@
             <div class="skills-header-right section-header-right-40"></div>
           </div>
           <div class="skills-content section-content">
-            <div class="skills-content-left section-content-left-60" data-aos="fade-right">
-              <div class="skills-content-left-content section-content-left-60-content odd">
+            <div
+              class="skills-content-left section-content-left-60"
+              data-aos="fade-right"
+            >
+              <div
+                class="
+                  skills-content-left-content
+                  section-content-left-60-content
+                  odd
+                "
+              >
                 <div class="item-detail">
                   <p class="code skill">Javascript</p>
                   <p class="code skill">Node.js</p>
@@ -632,18 +829,41 @@
                   <p class="code skill">Android Studio</p>
                   <p class="code skill">Vue.js</p>
                   <p class="code skill">C/C++</p>
-                  <p class="code skill">AWS (Elastic Beanstalk, Relational Database, Amplify)</p>
+                  <p class="code skill">
+                    AWS (Elastic Beanstalk, Relational Database, Amplify)
+                  </p>
                 </div>
               </div>
             </div>
 
             <div class="skills-content-right section-content-right-40">
-              <div class="skills-content-right-content section-content-right-40-content">
-                <h5 class="item-name active" onclick="selectSkills(0)" data-aos="flip-up">
+              <div
+                class="
+                  skills-content-right-content
+                  section-content-right-40-content
+                "
+              >
+                <h5
+                  class="item-name active"
+                  onclick="selectSkills(0)"
+                  data-aos="flip-up"
+                >
                   Proficient
                 </h5>
-                <h5 class="item-name" onclick="selectSkills(1)" data-aos="flip-up">Familiar</h5>
-                <h5 class="item-name" onclick="selectSkills(2)" data-aos="flip-up">Basic</h5>
+                <h5
+                  class="item-name"
+                  onclick="selectSkills(1)"
+                  data-aos="flip-up"
+                >
+                  Familiar
+                </h5>
+                <h5
+                  class="item-name"
+                  onclick="selectSkills(2)"
+                  data-aos="flip-up"
+                >
+                  Basic
+                </h5>
               </div>
             </div>
           </div>
@@ -654,19 +874,35 @@
         <div class="contact section">
           <div class="contact-header section-header">
             <div class="contact-header-left section-header-left-60">
-              <div class="contact-header-left-content section-header-left-60-content">
+              <div
+                class="
+                  contact-header-left-content
+                  section-header-left-60-content
+                "
+              >
                 <h4>get in touch.<span class="full-stop"></span></h4>
               </div>
             </div>
 
             <div class="contact-header-right section-header-right-40">
-              <div class="contact-header-right-content section-header-right-40-content">
+              <div
+                class="
+                  contact-header-right-content
+                  section-header-right-40-content
+                "
+              >
                 <div class="contact-svgs">
                   <a href="https://github.com/teo-jun-xiong"
-                    ><img class="contact-svg" src="./assets/icon-github.svg" alt="github"
+                    ><img
+                      class="contact-svg"
+                      src="./assets/icon-github.svg"
+                      alt="github"
                   /></a>
                   <a href="https://linkedin.com/in/teo-jun-xiong"
-                    ><img class="contact-svg" src="./assets/icon-linkedin.svg" alt="linkedin"
+                    ><img
+                      class="contact-svg"
+                      src="./assets/icon-linkedin.svg"
+                      alt="linkedin"
                   /></a>
                   <a href="mailto:teojunxiong97@gmail.com"
                     ><img
@@ -681,14 +917,14 @@
           </div>
         </div>
       </div>
-      
+
       <div class="back-to-top">
-        <a class="back-to-top-link" onclick=toTop()>
-          <img src="assets/icon-up.svg"/>
+        <a class="back-to-top-link" onclick="toTop()">
+          <img src="assets/icon-up.svg" />
         </a>
         <script>
-          function toTop(){
-            window.scrollTo({top: 0, behavior: 'smooth'});
+          function toTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }
         </script>
       </div>
