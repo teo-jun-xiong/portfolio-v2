@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teo jun xiong</title>
+    <title>Teo Jun Xiong</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
 
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/animations.css" />
@@ -37,12 +38,11 @@
       <div class="content">
         <div class="landing">
           <div class="header">
-            <!-- <h5 class="code">&lt; teo jun xiong /&gt;</h5> -->
-
             <nav>
-              <a href="index.html" class="navbar-brand"
-                ><h5 class="code">&lt; teo jun xiong /&gt;</h5></a
-              >
+              <a href="index.html" class="navbar-brand">
+                <img class="icon" src="assets/icon.svg" />
+                <h5 class="code">&lt; teo jun xiong /&gt;</h5>
+              </a>
               <div class="gap"></div>
               <ul class="nav-list">
                 <li class="nav-item">
@@ -312,6 +312,21 @@
                 $(".mouse").fadeOut(1000);
               } else {
                 $(".mouse").fadeIn();
+              }
+            });
+          });
+
+          jQuery(function ($) {
+            $(window).scroll(function () {
+              var yPos = $(window).scrollTop();
+
+              if (yPos > $(window).height()/2) {
+                // Show element after this amount of scrolled down pixels
+                $(".back-to-top").fadeIn();
+
+              } else {
+                $(".back-to-top").fadeOut();
+
               }
             });
           });
@@ -666,34 +681,17 @@
           </div>
         </div>
       </div>
-
-      <!-- <script>
-      var mouseTopPerc = 0;
-      function getMousePos() {
-        return mouseTopPerc * 400 + 400;
-      }
-      $("body").on("mousemove", function (e) {
-        mouseTopPerc = e.clientY / $(this).innerHeight();
-      });
-
-      var tween = TweenMax.to(".intro-left", 2, { x: "50%" });
-      var scene = new ScrollMagic.Scene({
-        triggerElement: ".image",
-        duration: getMousePos,
-        offset: -400,
-      })
-        .setTween(tween)
-        .addTo(controller);
-
-      tween = TweenMax.to(".intro-text", 1, { x: -0.5 * $(this).innerWidth() + 480, y: "24%" });
-      scene = new ScrollMagic.Scene({
-        triggerElement: ".image",
-        duration: getMousePos,
-        offset: -400,
-      })
-        .setTween(tween)
-        .addTo(controller);
-    </script> -->
+      
+      <div class="back-to-top">
+        <a class="back-to-top-link" onclick=toTop()>
+          <img src="assets/icon-up.svg"/>
+        </a>
+        <script>
+          function toTop(){
+            window.scrollTo({top: 0, behavior: 'smooth'});
+          }
+        </script>
+      </div>
     </body>
   </div>
 </html>
