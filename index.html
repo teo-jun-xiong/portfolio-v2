@@ -25,627 +25,643 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <style></style>
-
-    <script>
-      AOS.init({ duration: 1000 });
-      var controller = new ScrollMagic.Controller();
-    </script>
-
-    <div class="content">
-      <div class="landing">
-        <div class="header">
-          <!-- <h5 class="code">&lt; teo jun xiong /&gt;</h5> -->
-
-          <nav>
-            <a href="index.html" class="navbar-brand"
-              ><h5 class="code">&lt; teo jun xiong /&gt;</h5></a
-            >
-            <div class="gap"></div>
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-about">about</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-experience">experience</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-projects">projects</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-skills">skills</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-contact">contact</a>
-              </li>
-            </ul>
-
-            <script>
-              $(".nav-about").click(function () {
-                $("html,body").animate(
-                  {
-                    scrollTop: $(".about").offset().top,
-                  },
-                  "slow"
-                );
-              });
-
-              $(".nav-experience").click(function () {
-                $("html,body").animate(
-                  {
-                    scrollTop: $(".experience").offset().top,
-                  },
-                  "slow"
-                );
-              });
-
-              $(".nav-projects").click(function () {
-                $("html,body").animate(
-                  {
-                    scrollTop: $(".projects").offset().top,
-                  },
-                  "slow"
-                );
-              });
-
-              $(".nav-skills").click(function () {
-                $("html,body").animate(
-                  {
-                    scrollTop: $(".skills").offset().top,
-                  },
-                  "slow"
-                );
-              });
-
-              $(".nav-contact").click(function () {
-                $("html,body").animate(
-                  {
-                    scrollTop: $(".contact").offset().top,
-                  },
-                  "slow"
-                );
-              });
-            </script>
-
-            <div class="hamburger">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-          </nav>
-
-          <script>
-            function selectElement(e) {
-              return document.querySelector(e);
-            }
-
-            selectElement(".hamburger").addEventListener("click", () => {
-              selectElement(".hamburger").classList.toggle("active");
-              selectElement(".nav-list").classList.toggle("active");
-            });
-          </script>
-        </div>
-
-        <div class="intro">
-          <img
-            class="terminal-replay hide"
-            src="assets/icon-replay.svg"
-            onclick="resetAnimation()"
-          />
-          <script>
-            function resetAnimation() {
-              let replaySvg = document.querySelector(".terminal-replay");
-              replaySvg.classList.remove("scale-in-center");
-              replaySvg.classList.add("rotate-out-center");
-              let terminals = [...document.querySelectorAll(".intro .intro-terminal .terminal")];
-              let totalTerminals = terminals.length;
-
-              terminals[0].classList.add("terminal-show");
-              terminals[0].classList.remove("terminal-hide");
-              terminals[totalTerminals - 1].classList.remove("terminal-show");
-              terminals[totalTerminals - 1].classList.add("terminal-hide");
-              setTimeout(() => {
-                replaySvg.classList.remove("rotate-out-center");
-                replaySvg.classList.add("hide");
-              }, 1000);
-
-              animateTerminal();
-            }
-          </script>
-
-          <div class="intro-terminal">
-            <object
-              class="terminal terminal-0 terminal-show"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-0.svg"
-            ></object>
-            <object
-              class="terminal terminal-1 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-1.svg"
-            ></object>
-            <object
-              class="terminal terminal-2 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-2.svg"
-            ></object>
-            <object
-              class="terminal terminal-3 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-3.svg"
-            ></object>
-            <object
-              class="terminal terminal-4 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-4.svg"
-            ></object>
-            <object
-              class="terminal terminal-5 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-5.svg"
-            ></object>
-            <object
-              class="terminal terminal-6 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-6.svg"
-            ></object>
-            <object
-              class="terminal terminal-7 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-7.svg"
-            ></object>
-            <object
-              class="terminal terminal-8 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-8.svg"
-            ></object>
-            <object
-              class="terminal terminal-9 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-9.svg"
-            ></object>
-            <object
-              class="terminal terminal-10 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-10.svg"
-            ></object>
-            <object
-              class="terminal terminal-11 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-11.svg"
-            ></object>
-            <object
-              class="terminal terminal-12 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-12.svg"
-            ></object>
-            <object
-              class="terminal terminal-13 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-13.svg"
-            ></object>
-            <object
-              class="terminal terminal-14 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-14.svg"
-            ></object>
-            <object
-              class="terminal terminal-15 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-15.svg"
-            ></object>
-            <object
-              class="terminal terminal-16 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-16.svg"
-            ></object>
-            <object
-              class="terminal terminal-17 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-17.svg"
-            ></object>
-            <object
-              class="terminal terminal-18 terminal-hide"
-              type="image/svg+xml"
-              data="assets/terminal/terminal-18.svg"
-            ></object>
-          </div>
-          <a class="scroll-link" href="#about">
-            <svg
-              class="mouse hide"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 76 130"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <g fill="none" fill-rule="evenodd">
-                <rect
-                  width="70"
-                  height="118"
-                  x="1.5"
-                  y="1.5"
-                  stroke="#FFF"
-                  stroke-width="3"
-                  rx="36"
-                />
-                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
-              </g>
-            </svg>
-          </a>
-        </div>
-      </div>
+  <div class="wrapper">
+    <body>
+      <style></style>
 
       <script>
-        jQuery(document).ready(function ($) {
-          $("a.scroll-link").click(function (e) {
-            e.preventDefault();
-            $id = $(this).attr("href");
-            $("body,html").animate(
-              {
-                scrollTop: $($id).offset().top - 20,
-              },
-              750
-            );
-          });
-        });
-
-        jQuery(function ($) {
-          $(window).scroll(function () {
-            var yPos = $(window).scrollTop();
-
-            if (yPos > $(window).height() / 2) {
-              // Show element after this amount of scrolled down pixels
-
-              $(".mouse").fadeOut();
-            } else {
-              $(".mouse").fadeIn();
-            }
-          });
-        });
-
-        function delay(ms) {
-          return new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-            }, ms);
-          });
-        }
-
-        async function animateTerminal() {
-          let terminals = [...document.querySelectorAll(".intro .intro-terminal .terminal")];
-          let curr = 0;
-          let totalTerminals = terminals.length;
-          await delay(1000);
-
-          while (true) {
-            console.log(curr);
-            if (curr === totalTerminals - 1) break;
-
-            if (curr === 8 || curr === 17) {
-              await delay(700);
-            } else {
-              await delay(300);
-            }
-
-            terminals[curr].classList.remove("terminal-show");
-            terminals[curr].classList.add("terminal-hide");
-            curr++;
-
-            if (curr < totalTerminals) {
-              terminals[curr].classList.add("terminal-show");
-              terminals[curr].classList.remove("terminal-hide");
-            } else {
-              break;
-            }
-          }
-          if (curr === 18) {
-            var replaySvg = document.querySelector(".terminal-replay");
-            replaySvg.classList.remove("hide");
-            replaySvg.classList.add("show");
-            replaySvg.classList.add("scale-in-center");
-
-            setTimeout(() => {
-              document.querySelector(".mouse").classList.remove("hide");
-              document.querySelector(".mouse").classList.add("slide-in-bottom");
-            }, 500);
-          }
-        }
-
-        animateTerminal();
+        AOS.init({ duration: 1000 });
+        var controller = new ScrollMagic.Controller();
       </script>
 
-      <div class="about section" id="#about">
-        <div class="about-header section-header">
-          <div class="about-header-left section-header-left-40">
-            <div class="about-header-left-content section-header-left-40-content">
-              <!-- <h2>about<span class="even-comma">,</span></h2> -->
+      <div class="content">
+        <div class="landing">
+          <div class="header">
+            <!-- <h5 class="code">&lt; teo jun xiong /&gt;</h5> -->
 
-              <img class="section-header-svg" src="assets/svg-about.svg" />
-            </div>
+            <nav>
+              <a href="index.html" class="navbar-brand"
+                ><h5 class="code">&lt; teo jun xiong /&gt;</h5></a
+              >
+              <div class="gap"></div>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#" class="nav-link nav-about">about</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link nav-experience">experience</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link nav-projects">projects</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link nav-skills">skills</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link nav-contact">contact</a>
+                </li>
+              </ul>
+
+              <script>
+                function removeActive() {
+                  document.querySelector(".hamburger").classList.remove("active");document.querySelector(".nav-list").classList.remove("active");
+                }
+
+                $(".nav-about").click(function () {
+                  $("html,body").animate(
+                    {
+                      scrollTop: $(".about").offset().top,
+                    },
+                    "slow"
+                  );removeActive()
+                });
+
+                $(".nav-experience").click(function () {
+                  $("html,body").animate(
+                    {
+                      scrollTop: $(".experience").offset().top,
+                    },
+                    "slow"
+                  );removeActive()
+                });
+
+                $(".nav-projects").click(function () {
+                  $("html,body").animate(
+                    {
+                      scrollTop: $(".projects").offset().top,
+                    },
+                    "slow"
+                  );removeActive()
+                });
+
+                $(".nav-skills").click(function () {
+                  $("html,body").animate(
+                    {
+                      scrollTop: $(".skills").offset().top,
+                    },
+                    "slow"
+                  );removeActive()
+                });
+
+                $(".nav-contact").click(function () {
+                  $("html,body").animate(
+                    {
+                      scrollTop: $(".contact").offset().top,
+                    },
+                    "slow"
+                  );removeActive()
+                });
+              </script>
+
+              <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </nav>
+
+            <script>
+              function selectElement(e) {
+                return document.querySelector(e);
+              }
+
+              selectElement(".hamburger").addEventListener("click", () => {
+                selectElement(".hamburger").classList.toggle("active");
+                selectElement(".nav-list").classList.toggle("active");
+              });
+            </script>
           </div>
-          <div class="about-header-right section-header-right-60"></div>
+
+          <div class="intro">
+            <img
+              class="terminal-replay hide"
+              src="assets/icon-replay.svg"
+              onclick="resetAnimation()"
+            />
+            <script>
+              function resetAnimation() {
+                let replaySvg = document.querySelector(".terminal-replay");
+                replaySvg.classList.remove("scale-in-center");
+                replaySvg.classList.add("rotate-out-center");
+                let terminals = [...document.querySelectorAll(".intro .intro-terminal .terminal")];
+                let totalTerminals = terminals.length;
+
+                terminals[0].classList.add("terminal-show");
+                terminals[0].classList.remove("terminal-hide");
+                terminals[totalTerminals - 1].classList.remove("terminal-show");
+                terminals[totalTerminals - 1].classList.add("terminal-hide");
+                setTimeout(() => {
+                  replaySvg.classList.remove("rotate-out-center");
+                  replaySvg.classList.add("hide");
+                }, 1000);
+
+                animateTerminal();
+              }
+            </script>
+
+            <div class="intro-terminal">
+              <object
+                class="terminal terminal-0 terminal-show"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-0.svg"
+              ></object>
+              <object
+                class="terminal terminal-1 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-1.svg"
+              ></object>
+              <object
+                class="terminal terminal-2 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-2.svg"
+              ></object>
+              <object
+                class="terminal terminal-3 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-3.svg"
+              ></object>
+              <object
+                class="terminal terminal-4 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-4.svg"
+              ></object>
+              <object
+                class="terminal terminal-5 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-5.svg"
+              ></object>
+              <object
+                class="terminal terminal-6 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-6.svg"
+              ></object>
+              <object
+                class="terminal terminal-7 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-7.svg"
+              ></object>
+              <object
+                class="terminal terminal-8 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-8.svg"
+              ></object>
+              <object
+                class="terminal terminal-9 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-9.svg"
+              ></object>
+              <object
+                class="terminal terminal-10 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-10.svg"
+              ></object>
+              <object
+                class="terminal terminal-11 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-11.svg"
+              ></object>
+              <object
+                class="terminal terminal-12 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-12.svg"
+              ></object>
+              <object
+                class="terminal terminal-13 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-13.svg"
+              ></object>
+              <object
+                class="terminal terminal-14 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-14.svg"
+              ></object>
+              <object
+                class="terminal terminal-15 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-15.svg"
+              ></object>
+              <object
+                class="terminal terminal-16 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-16.svg"
+              ></object>
+              <object
+                class="terminal terminal-17 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-17.svg"
+              ></object>
+              <object
+                class="terminal terminal-18 terminal-hide"
+                type="image/svg+xml"
+                data="assets/terminal/terminal-18.svg"
+              ></object>
+            </div>
+            <a class="scroll-link" href="#about">
+              <svg
+                class="mouse hide"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 76 130"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <rect
+                    width="70"
+                    height="118"
+                    x="1.5"
+                    y="1.5"
+                    stroke="#FFF"
+                    stroke-width="3"
+                    rx="36"
+                  />
+                  <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="about-content section-content">
-          <div class="about-content-left section-content-left-40">
-            <div class="about-content-left-content section-content-left-40-content">
-              <h3>
-                I am
-                <div
-                  class="txt-rotate"
-                  data-period="100"
-                  data-rotate='["a fullstack dev", "ambitious", "always learning", "motivated"]'
-                ></div>
-              </h3>
+
+        <script>
+          $(".mouse").fadeIn();
+
+          jQuery(document).ready(function ($) {
+            $("a.scroll-link").click(function (e) {
+              e.preventDefault();
+              $id = $(this).attr("href");
+              $("body,html").animate(
+                {
+                  scrollTop: $($id).offset().top - 20,
+                },
+                750
+              );
+            });
+          });
+
+          jQuery(function ($) {
+            $(window).scroll(function () {
+              var yPos = $(window).scrollTop();
+
+              if (yPos > $(window).height() / 2) {
+                // Show element after this amount of scrolled down pixels
+
+                $(".mouse").fadeOut(1000);
+              } else {
+                $(".mouse").fadeIn();
+              }
+            });
+          });
+
+          function delay(ms) {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve();
+              }, ms);
+            });
+          }
+
+          async function animateTerminal() {
+            let terminals = [...document.querySelectorAll(".intro .intro-terminal .terminal")];
+            let curr = 0;
+            let totalTerminals = terminals.length;
+            await delay(1000);
+
+            while (true) {
+              console.log(curr);
+              if (curr === totalTerminals - 1) break;
+
+              if (curr === 8 || curr === 17) {
+                await delay(700);
+              } else {
+                await delay(300);
+              }
+
+              terminals[curr].classList.remove("terminal-show");
+              terminals[curr].classList.add("terminal-hide");
+              curr++;
+
+              if (curr < totalTerminals) {
+                terminals[curr].classList.add("terminal-show");
+                terminals[curr].classList.remove("terminal-hide");
+              } else {
+                break;
+              }
+            }
+            if (curr === 18) {
+              var replaySvg = document.querySelector(".terminal-replay");
+              replaySvg.classList.remove("hide");
+              replaySvg.classList.add("show");
+              replaySvg.classList.add("scale-in-center");
+
+              setTimeout(() => {
+                document.querySelector(".mouse").classList.remove("hide");
+                // document.querySelector(".mouse").classList.add("slide-in-bottom");
+              }, 500);
+            }
+          }
+
+          animateTerminal();
+        </script>
+
+        <div class="about section" id="#about">
+          <div class="about-header section-header">
+            <div class="about-header-left section-header-left-40">
+              <div class="about-header-left-content section-header-left-40-content">
+                <!-- <h2>about<span class="even-comma">,</span></h2> -->
+
+                <img class="section-header-svg" src="assets/svg-about.svg" />
+              </div>
             </div>
+            <div class="about-header-right section-header-right-60"></div>
           </div>
-
-          <div class="about-content-right section-content-right-60 even" data-aos="fade-left">
-            <div class="about-content-right-content section-content-right-60-content">
-              <h5>Hi, I'm Jun Xiong.</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
-                malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Sed augue
-                ipsum, dignissim nec lacus quis, venenatis feugiat lorem. Cras neque sem, blandit
-                sed efficitur ac, pellentesque in tortor. Fusce molestie laoreet ligula, ut
-                consequat diam sagittis et. Pellentesque varius iaculis mi, sed ultrices nulla
-                tempor a. Etiam ullamcorper erat urna, ac iaculis odio euismod sit amet.
-              </p>
+          <div class="about-content section-content">
+            <div class="about-content-left section-content-left-40">
+              <div class="about-content-left-content section-content-left-40-content">
+                <h3>
+                  I am
+                  <div
+                    class="txt-rotate"
+                    data-period="100"
+                    data-rotate='["a fullstack dev", "ambitious", "always learning", "motivated"]'
+                  ></div>
+                </h3>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="about-footer section-footer"></div>
-      </div>
-
-      <div class="experience section">
-        <div class="experience-header section-header">
-          <div class="experience-header-left section-header-left-60">
-            <div class="experience-header-left-content section-header-left-60-content">
-              <!-- <h2>experience<span class="odd-comma">,</span></h2> -->
-              <img class="section-header-svg" src="assets/svg-experience.svg" />
-            </div>
-          </div>
-          <div class="experience-header-right section-header-right-40"></div>
-        </div>
-        <div class="experience-content section-content">
-          <div class="experience-content-left section-content-left-60" data-aos="fade-right">
-            <div class="experience-content-left-content section-content-left-60-content odd">
-              <div class="item-detail">
-                <p class="item-detail-title">Jan 2021 - Aug 2021</p>
-
+            <div class="about-content-right section-content-right-60 even" data-aos="fade-left">
+              <div class="about-content-right-content section-content-right-60-content">
+                <h5>Hi, I'm Jun Xiong.</h5>
                 <p>
-                  1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est
-                  in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
-                </p>
-              </div>
-              <div class="item-detail hide">
-                <p class="item-detail-title">Jan 2020 - May 2020</p>
-
-                <p>
-                  I taught CS2040, Programming Methodology II, to undergraduates. Responsibilities
-                  include preparing lab briefs, reviewing students' lab exercises, and providing
-                  feedback as well as guidance for students.
+                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Sed
+                  augue ipsum, dignissim nec lacus quis, venenatis feugiat lorem. Cras neque sem,
+                  blandit sed efficitur ac, pellentesque in tortor. Fusce molestie laoreet ligula,
+                  ut consequat diam sagittis et. Pellentesque varius iaculis mi, sed ultrices nulla
+                  tempor a. Etiam ullamcorper erat urna, ac iaculis odio euismod sit amet.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="experience-content-right section-content-right-40">
-            <div class="experience-content-right-content section-content-right-40-content">
-              <h5 class="item-name active" onclick="selectExperience(0)" data-aos="flip-up">
-                software dev intern @ VIVITA Singapore
-              </h5>
-              <h5 class="item-name" onclick="selectExperience(1)" data-aos="flip-up">
-                teaching assistant @ NUS
-              </h5>
-            </div>
-          </div>
+          <div class="about-footer section-footer"></div>
         </div>
 
-        <div class="experience-footer section-footer"></div>
-      </div>
-
-      <div class="projects section">
-        <div class="projects-header section-header">
-          <div class="projects-header-left section-header-left-40">
-            <div class="projects-header-left-content section-header-left-40-content">
-              <!-- <h2>projects<span class="even-comma">,</span></h2> -->
-              <img class="section-header-svg" src="assets/svg-projects.svg" />
+        <div class="experience section">
+          <div class="experience-header section-header">
+            <div class="experience-header-left section-header-left-60">
+              <div class="experience-header-left-content section-header-left-60-content">
+                <!-- <h2>experience<span class="odd-comma">,</span></h2> -->
+                <img class="section-header-svg" src="assets/svg-experience.svg" />
+              </div>
             </div>
+            <div class="experience-header-right section-header-right-40"></div>
           </div>
-          <div class="projects-header-right section-header-right-60"></div>
-        </div>
-        <div class="projects-content section-content">
-          <div class="projects-content-left section-content-left-40">
-            <div class="projects-content-left-content section-content-left-40-content">
-              <h5 class="item-name active" onclick="selectProject(0)" data-aos="flip-up">
-                VIVIBOOM
-              </h5>
-              <h5 class="item-name" onclick="selectProject(1)" data-aos="flip-up">Pathfinder</h5>
-              <h5 class="item-name" onclick="selectProject(2)" data-aos="flip-up">Eldereach</h5>
-              <h5 class="item-name" onclick="selectProject(3)" data-aos="flip-up">wing it!</h5>
-            </div>
-          </div>
+          <div class="experience-content section-content">
+            <div class="experience-content-left section-content-left-60" data-aos="fade-right">
+              <div class="experience-content-left-content section-content-left-60-content odd">
+                <div class="item-detail">
+                  <p class="item-detail-title">Jan 2021 - Aug 2021</p>
 
-          <div class="projects-content-right section-content-right-60 even" data-aos="fade-left">
-            <div class="projects-content-right-content section-content-right-60-content">
-              <div class="item-detail">
-                <p class="item-detail-title">sample item title, Jan 2021 - Aug 2021</p>
-
-                <p>
-                  1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est
-                  in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor. Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies, est in
-                  malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at tortor.
-                </p>
-
-                <p class="code">Tech stack: Javascript, Node.js, ReactJS, MySQL, CSS, HTML, AWS</p>
-              </div>
-
-              <div class="item-detail hide">
-                <p class="item-detail-title">a search algorithm visualiser, Jul 2020 - Aug 2020</p>
-
-                <p>
-                  Pathfinder is an exploratory project in integrating frontend React development,
-                  and classic search algorithms, namely Dijkstra's algorithm and depth first search.
-                </p>
-
-                <p></p>
-
-                <p class="code">Tech stack: Javascript, ReactJS, CSS, HTML</p>
-
-                <div class="button-container hover-shadow">
-                  <a href="#">try &lt; Pathfinder /&gt;</a>
+                  <p>
+                    1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies,
+                    est in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at
+                    tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
+                    leo at tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
+                    leo at tortor.
+                  </p>
                 </div>
-              </div>
+                <div class="item-detail hide">
+                  <p class="item-detail-title">Jan 2020 - May 2020</p>
 
-              <div class="item-detail hide">
-                <p class="item-detail-title">an Android app for the elderly, May 2020 - Jul 2020</p>
-
-                <p>
-                  Eldereach was provides needy elderly greater accessibility to services, and allows
-                  charity organizations and volunteers to source for opportunities to provide
-                  services to the elderly. It aims to connect the caregivers of the elderly with
-                  charity organizations.
-                </p>
-
-                <p class="code">Tech stack: Java, Firebase, Firestore</p>
-                <div class="button-container hover-shadow">
-                  <a href="#">view &lt; Eldereach /&gt;</a>
-                </div>
-              </div>
-
-              <div class="item-detail hide">
-                <p class="item-detail-title">
-                  an Android app for efficient travellers, Jun 2019 - Jul 2019
-                </p>
-
-                <p>
-                  An Android mobile application developed to help travellers create an itinerary
-                  which best allows them visit all their places of interest within the span of their
-                  travels. wing_it! allows users to indicate their desired duration to spend at a
-                  place of interest, and takes it into account when devising the itinerary.
-                </p>
-
-                <p class="code">Tech stack: Java, Google Maps API</p>
-                <div class="button-container hover-shadow">
-                  <a href="#">view &lt; wing it! /&gt;</a>
+                  <p>
+                    I taught CS2040, Programming Methodology II, to undergraduates. Responsibilities
+                    include preparing lab briefs, reviewing students' lab exercises, and providing
+                    feedback as well as guidance for students.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div class="projects-content-imgs" data-aos="fade-left">
-              <div class="projects-content-img">
-                <img src="./assets/project-boom.png" alt="viviboom" />
+            <div class="experience-content-right section-content-right-40">
+              <div class="experience-content-right-content section-content-right-40-content">
+                <h5 class="item-name active" onclick="selectExperience(0)" data-aos="flip-up">
+                  software dev intern @ VIVITA Singapore
+                </h5>
+                <h5 class="item-name" onclick="selectExperience(1)" data-aos="flip-up">
+                  teaching assistant @ NUS
+                </h5>
               </div>
-              <div class="projects-content-img hide">
-                <img src="./assets/project-pathfinder.png" alt="pathfinder" />
+            </div>
+          </div>
+
+          <div class="experience-footer section-footer"></div>
+        </div>
+
+        <div class="projects section">
+          <div class="projects-header section-header">
+            <div class="projects-header-left section-header-left-40">
+              <div class="projects-header-left-content section-header-left-40-content">
+                <!-- <h2>projects<span class="even-comma">,</span></h2> -->
+                <img class="section-header-svg" src="assets/svg-projects.svg" />
               </div>
-              <div class="projects-content-img hide">
-                <img src="./assets/project-eldereach.png" alt="eldereach" />
+            </div>
+            <div class="projects-header-right section-header-right-60"></div>
+          </div>
+          <div class="projects-content section-content">
+            <div class="projects-content-left section-content-left-40">
+              <div class="projects-content-left-content section-content-left-40-content">
+                <h5 class="item-name active" onclick="selectProject(0)" data-aos="flip-up">
+                  VIVIBOOM
+                </h5>
+                <h5 class="item-name" onclick="selectProject(1)" data-aos="flip-up">Pathfinder</h5>
+                <h5 class="item-name" onclick="selectProject(2)" data-aos="flip-up">Eldereach</h5>
+                <h5 class="item-name" onclick="selectProject(3)" data-aos="flip-up">wing it!</h5>
               </div>
-              <div class="projects-content-img hide">
-                <img src="./assets/project-wing-it.png" alt="wing-it" />
+            </div>
+
+            <div class="projects-content-right section-content-right-60 even" data-aos="fade-left">
+              <div class="projects-content-right-content section-content-right-60-content">
+                <div class="item-detail">
+                  <p class="item-detail-title">sample item title, Jan 2021 - Aug 2021</p>
+
+                  <p>
+                    1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies,
+                    est in malesuada dictum, nisi eros fringilla nisl, id viverra quam leo at
+                    tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
+                    leo at tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    ultricies, est in malesuada dictum, nisi eros fringilla nisl, id viverra quam
+                    leo at tortor.
+                  </p>
+
+                  <p class="code">
+                    Tech stack: Javascript, Node.js, ReactJS, MySQL, CSS, HTML, AWS
+                  </p>
+                </div>
+
+                <div class="item-detail hide">
+                  <p class="item-detail-title">
+                    a search algorithm visualiser, Jul 2020 - Aug 2020
+                  </p>
+
+                  <p>
+                    Pathfinder is an exploratory project in integrating frontend React development,
+                    and classic search algorithms, namely Dijkstra's algorithm and depth first
+                    search.
+                  </p>
+
+                  <p></p>
+
+                  <p class="code">Tech stack: Javascript, ReactJS, CSS, HTML</p>
+
+                  <div class="button-container hover-shadow">
+                    <a href="#">try &lt; Pathfinder /&gt;</a>
+                  </div>
+                </div>
+
+                <div class="item-detail hide">
+                  <p class="item-detail-title">
+                    an Android app for the elderly, May 2020 - Jul 2020
+                  </p>
+
+                  <p>
+                    Eldereach was provides needy elderly greater accessibility to services, and
+                    allows charity organizations and volunteers to source for opportunities to
+                    provide services to the elderly. It aims to connect the caregivers of the
+                    elderly with charity organizations.
+                  </p>
+
+                  <p class="code">Tech stack: Java, Firebase, Firestore</p>
+                  <div class="button-container hover-shadow">
+                    <a href="#">view &lt; Eldereach /&gt;</a>
+                  </div>
+                </div>
+
+                <div class="item-detail hide">
+                  <p class="item-detail-title">
+                    an Android app for efficient travellers, Jun 2019 - Jul 2019
+                  </p>
+
+                  <p>
+                    An Android mobile application developed to help travellers create an itinerary
+                    which best allows them visit all their places of interest within the span of
+                    their travels. wing_it! allows users to indicate their desired duration to spend
+                    at a place of interest, and takes it into account when devising the itinerary.
+                  </p>
+
+                  <p class="code">Tech stack: Java, Google Maps API</p>
+                  <div class="button-container hover-shadow">
+                    <a href="#">view &lt; wing it! /&gt;</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects-content-imgs" data-aos="fade-left">
+                <div class="projects-content-img">
+                  <img src="./assets/project-boom.png" alt="viviboom" />
+                </div>
+                <div class="projects-content-img hide">
+                  <img src="./assets/project-pathfinder.png" alt="pathfinder" />
+                </div>
+                <div class="projects-content-img hide">
+                  <img src="./assets/project-eldereach.png" alt="eldereach" />
+                </div>
+                <div class="projects-content-img hide">
+                  <img src="./assets/project-wing-it.png" alt="wing-it" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-footer section-footer"></div>
+        </div>
+
+        <div class="skills section">
+          <div class="skills-header section-header">
+            <div class="skills-header-left section-header-left-60">
+              <div class="skills-header-left-content section-header-left-60-content">
+                <!-- <h2>skills<span class="odd-comma">,</span></h2> -->
+                <img class="section-header-svg" src="assets/svg-skills.svg" />
+              </div>
+            </div>
+            <div class="skills-header-right section-header-right-40"></div>
+          </div>
+          <div class="skills-content section-content">
+            <div class="skills-content-left section-content-left-60" data-aos="fade-right">
+              <div class="skills-content-left-content section-content-left-60-content odd">
+                <div class="item-detail">
+                  <p class="code skill">Javascript</p>
+                  <p class="code skill">Node.js</p>
+                  <p class="code skill">React.js</p>
+                  <p class="code skill">Git</p>
+                  <p class="code skill">MySQL</p>
+                </div>
+
+                <div class="item-detail hide">
+                  <p class="code skill">Python</p>
+                  <p class="code skill">Java</p>
+                  <p class="code skill">HTML</p>
+                  <p class="code skill">CSS</p>
+                  <p class="code skill">RESTful API</p>
+                </div>
+
+                <div class="item-detail hide">
+                  <p class="code skill">UI/UX</p>
+                  <p class="code skill">Pandas</p>
+                  <p class="code skill">Android Studio</p>
+                  <p class="code skill">Vue.js</p>
+                  <p class="code skill">C/C++</p>
+                  <p class="code skill">AWS (Elastic Beanstalk, Relational Database, Amplify)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-content-right section-content-right-40">
+              <div class="skills-content-right-content section-content-right-40-content">
+                <h5 class="item-name active" onclick="selectSkills(0)" data-aos="flip-up">
+                  Proficient
+                </h5>
+                <h5 class="item-name" onclick="selectSkills(1)" data-aos="flip-up">Familiar</h5>
+                <h5 class="item-name" onclick="selectSkills(2)" data-aos="flip-up">Basic</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-footer section-footer"></div>
+        </div>
+
+        <div class="contact section">
+          <div class="contact-header section-header">
+            <div class="contact-header-left section-header-left-60">
+              <div class="contact-header-left-content section-header-left-60-content">
+                <h4>get in touch.<span class="full-stop"></span></h4>
+              </div>
+            </div>
+
+            <div class="contact-header-left section-header-right-40">
+              <div class="contact-header-left-content section-header-right-40-content">
+                <div class="contact-svgs">
+                  <a href="https://github.com/teo-jun-xiong"
+                    ><img class="contact-svg" src="./assets/icon-github.svg" alt="github"
+                  /></a>
+                  <a href="https://linkedin.com/in/teo-jun-xiong"
+                    ><img class="contact-svg" src="./assets/icon-linkedin.svg" alt="linkedin"
+                  /></a>
+                  <a href="mailto:teojunxiong97@gmail.com"
+                    ><img
+                      class="contact-svg"
+                      style="margin-top: 12px"
+                      src="./assets/icon-email.svg"
+                      alt="email"
+                  /></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="projects-footer section-footer"></div>
       </div>
 
-      <div class="skills section">
-        <div class="skills-header section-header">
-          <div class="skills-header-left section-header-left-60">
-            <div class="skills-header-left-content section-header-left-60-content">
-              <!-- <h2>skills<span class="odd-comma">,</span></h2> -->
-              <img class="section-header-svg" src="assets/svg-skills.svg" />
-            </div>
-          </div>
-          <div class="skills-header-right section-header-right-40"></div>
-        </div>
-        <div class="skills-content section-content">
-          <div class="skills-content-left section-content-left-60" data-aos="fade-right">
-            <div class="skills-content-left-content section-content-left-60-content odd">
-              <div class="item-detail">
-                <p class="code skill">Javascript</p>
-                <p class="code skill">Node.js</p>
-                <p class="code skill">React.js</p>
-                <p class="code skill">Git</p>
-                <p class="code skill">MySQL</p>
-              </div>
-
-              <div class="item-detail hide">
-                <p class="code skill">Python</p>
-                <p class="code skill">Java</p>
-                <p class="code skill">HTML</p>
-                <p class="code skill">CSS</p>
-                <p class="code skill">RESTful API</p>
-              </div>
-
-              <div class="item-detail hide">
-                <p class="code skill">UI/UX</p>
-                <p class="code skill">Pandas</p>
-                <p class="code skill">Android Studio</p>
-                <p class="code skill">Vue.js</p>
-                <p class="code skill">C/C++</p>
-                <p class="code skill">AWS (Elastic Beanstalk, Relational Database, Amplify)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-content-right section-content-right-40">
-            <div class="skills-content-right-content section-content-right-40-content">
-              <h5 class="item-name active" onclick="selectSkills(0)" data-aos="flip-up">
-                Proficient
-              </h5>
-              <h5 class="item-name" onclick="selectSkills(1)" data-aos="flip-up">Familiar</h5>
-              <h5 class="item-name" onclick="selectSkills(2)" data-aos="flip-up">Basic</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-footer section-footer"></div>
-      </div>
-
-      <div class="contact section">
-        <div class="contact-header section-header">
-          <div class="contact-header-left section-header-left-60">
-            <div class="contact-header-left-content section-header-left-60-content">
-              <h4>get in touch.<span class="full-stop"></span></h4>
-            </div>
-          </div>
-
-          <div class="contact-header-left section-header-right-40">
-            <div class="contact-header-left-content section-header-right-40-content">
-              <div class="contact-svgs">
-                <a href="https://github.com/teo-jun-xiong"
-                  ><img class="contact-svg" src="./assets/icon-github.svg" alt="github"
-                /></a>
-                <a href="https://linkedin.com/in/teo-jun-xiong"
-                  ><img class="contact-svg" src="./assets/icon-linkedin.svg" alt="linkedin"
-                /></a>
-                <a href="mailto:teojunxiong97@gmail.com"
-                  ><img
-                    class="contact-svg"
-                    style="margin-top: 12px"
-                    src="./assets/icon-email.svg"
-                    alt="email"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- <script>
+      <!-- <script>
       var mouseTopPerc = 0;
       function getMousePos() {
         return mouseTopPerc * 400 + 400;
@@ -672,5 +688,6 @@
         .setTween(tween)
         .addTo(controller);
     </script> -->
-  </body>
+    </body>
+  </div>
 </html>
