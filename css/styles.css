@@ -336,6 +336,7 @@ img {
 .section {
   width: 100%;
 }
+
 .section-header {
   display: flex;
   flex-flow: row;
@@ -471,7 +472,8 @@ img {
 /* EXPERIENCE */
 
 /* PROJECTS */
-.projects-content-right-content {
+.projects-content-right-content {  transition:height 1s ease-in-out;
+
   padding-right: 480px;
 }
 .projects-content-img {
