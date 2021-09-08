@@ -131,7 +131,7 @@ nav {
   display: block;
   right: 0;
   background-color: #fff;
-  transition: all 650ms;
+  transition: all 200ms;
 }
 
 .hamburger .line:nth-child(1) {
@@ -166,35 +166,35 @@ nav {
   visibility: visible;
 }
 .nav-list.active .nav-item:nth-child(1) .nav-link {
-  transition-delay: 0.5s;
-}
-.nav-list.active .nav-item:nth-child(2) .nav-link {
-  transition-delay: 0.4s;
-}
-.nav-list.active .nav-item:nth-child(3) .nav-link {
-  transition-delay: 0.3s;
-}
-.nav-list.active .nav-item:nth-child(4) .nav-link {
   transition-delay: 0.2s;
 }
+.nav-list.active .nav-item:nth-child(2) .nav-link {
+  transition-delay: 0.16s;
+}
+.nav-list.active .nav-item:nth-child(3) .nav-link {
+  transition-delay: 0.12s;
+}
+.nav-list.active .nav-item:nth-child(4) .nav-link {
+  transition-delay: 0.08s;
+}
 .nav-list.active .nav-item:nth-child(5) .nav-link {
-  transition-delay: 0.1s;
+  transition-delay: 0.04s;
 }
 
 .nav-list .nav-item:nth-child(1) .nav-link {
-  transition-delay: 0.1s;
+  transition-delay: 0.04s;
 }
 .nav-list .nav-item:nth-child(2) .nav-link {
-  transition-delay: 0.2s;
+  transition-delay: 0.08s;
 }
 .nav-list .nav-item:nth-child(3) .nav-link {
-  transition-delay: 0.3s;
+  transition-delay: 0.12s;
 }
 .nav-list .nav-item:nth-child(4) .nav-link {
-  transition-delay: 0.4s;
+  transition-delay: 0.16s;
 }
 .nav-list .nav-item:nth-child(5) .nav-link {
-  transition-delay: 0.5s;
+  transition-delay: 0.2s;
 }
 
 .intro {
@@ -319,15 +319,15 @@ img {
 }
 .button-container a {
   width: 200px;
-  color: #e5e9f0;
+  color: #72FACA;
   text-decoration: none;
   font-family: "Ubuntu Mono";
   font-weight: 900;
   display: inline-block;
 }
-
+ 
 .hover-shadow:hover {
-  box-shadow: 1px 1px #e5e9f0, 2px 2px #e5e9f0, 3px 3px #e5e9f0;
+  box-shadow: 1px 1px #72FACA, 2px 2px #72FACA, 3px 3px #72FACA;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
 }
@@ -480,6 +480,13 @@ img {
   width: 680px;
   position: absolute;
   right: -220px;
+  margin-top: -180px;
+}
+
+.projects-content-img.portrait {
+  width: 340px;
+  position: absolute;
+  right: 0px;
   margin-top: -180px;
 }
 
@@ -636,6 +643,12 @@ img {
     margin: auto;
     margin-bottom: -20px;
   }
+  .projects-content-img.portrait {
+    position: relative;
+    margin: auto;
+    margin-bottom: -20px;
+    width: 280px;
+  }
   .back-to-top {
     right: 120px;
   }
@@ -697,6 +710,10 @@ img {
   .projects-content-img {
     right: -28%;
     width: 100%;
+  }
+  .projects-content-img.portrait {
+    right: -28%;
+    width: 200px;
   }
   .contact-header-left-content {
     padding: 0px 40px;
